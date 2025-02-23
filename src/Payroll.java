@@ -7,18 +7,18 @@ import java.util.ArrayList;
 
 abstract class StaffMember {
     private String name;
-    private int idNumber;
-    private int hoursWorked;
+     private int idNumber;
+       private int hoursWorked;
 
     // Parameterized constructor
-    public StaffMember(String name, int idNumber, int hoursWorked) {
+        public StaffMember(String name, int idNumber, int hoursWorked) {
         this.name = name;
-        this.idNumber = idNumber;
+               this.idNumber = idNumber;
         this.hoursWorked = hoursWorked;
     }
 
     // Getter and Setter methods
-    public String getName() {
+           public String getName() {
         return name;
     }
 
@@ -26,7 +26,7 @@ abstract class StaffMember {
         this.name = name;
     }
 
-    public int getIdNumber() {
+        public int getIdNumber() {
         return idNumber;
     }
 
@@ -45,7 +45,7 @@ abstract class StaffMember {
     // Display method
     public void display() {
         System.out.println("Name: " + name);
-        System.out.println("ID Number: " + idNumber);
+           System.out.println("ID Number: " + idNumber);
         System.out.println("Hours Worked: " + hoursWorked);
     }
 
@@ -73,14 +73,14 @@ class Manager extends StaffMember {
 
     // Override display method
     @Override
-    public void display() {
+           public void display() {
         super.display();
-        System.out.println("Bonus: " + bonus);
+           System.out.println("Bonus: " + bonus);
     }
 
     // Implement calculateSalary method
     @Override
-    public double calculateSalary() {
+        public double calculateSalary() {
         return (getHoursWorked() * 2500) + bonus;
     }
 }
@@ -121,17 +121,17 @@ public class Payroll {
     public static void main(String[] args) {
         // Task 3: Instantiate and display a StaffMember object
         StaffMember staff = new Manager("Delvian Brown", 101, 40, 5000);
-        System.out.println("Staff Member Details:");
-        staff.display();
+          System.out.println("Staff Member Details:");
+            staff.display();
         System.out.println();
 
         // Task 4: Create a list of SalesRep objects
         ArrayList<SalesRep> salesReps = new ArrayList<>();
         salesReps.add(new SalesRep("Ory Williams", 201, 35, 1000));
-        salesReps.add(new SalesRep("Lyndall Walcot", 202, 40, 1200));
-        salesReps.add(new SalesRep("Fabian Sebastian", 203, 30, 800));
-        salesReps.add(new SalesRep("Hamlet Survey", 204, 45, 1500));
-        salesReps.add(new SalesRep("Romario Richardson", 205, 38, 1100));
+         salesReps.add(new SalesRep("Lyndall Walcot", 202, 40, 1200));
+          salesReps.add(new SalesRep("Fabian Sebastian", 203, 30, 800));
+           salesReps.add(new SalesRep("Hamlet Survey", 204, 45, 1500));
+             salesReps.add(new SalesRep("Romario Richardson", 205, 38, 1100));
 
         // Task 5: Display SalesRep objects
         System.out.println("Sales Representatives Details:");
@@ -147,25 +147,25 @@ public class Payroll {
         System.out.println();
 
         polymorphicStaff = new SalesRep("Christian  Black", 206, 40, 1300);
-        System.out.println("Polymorphic Display (SalesRep):");
+          System.out.println("Polymorphic Display (SalesRep):");
         polymorphicStaff.display();
         System.out.println();
 
         // Task 8: Display salaries
         StaffMember manager = new Manager("Delvian Brown", 101, 40, 5000);
-        StaffMember salesRep = new SalesRep("Ory Williams", 201, 35, 1000);
+           StaffMember salesRep = new SalesRep("Ory Williams", 201, 35, 1000);
 
         System.out.println("Manager Salary: " + manager.calculateSalary());
         System.out.println("SalesRep Salary: " + salesRep.calculateSalary());
 
         // Task 9: Generate paystubs
         System.out.println("\nPaystubs:");
-        System.out.println("Manager Paystub:");
+          System.out.println("Manager Paystub:");
         manager.display();
         System.out.println("Salary: " + manager.calculateSalary());
 
         System.out.println("\nSalesRep Paystub:");
-        salesRep.display();
+            salesRep.display();
         System.out.println("Salary: " + salesRep.calculateSalary());
     }
 }

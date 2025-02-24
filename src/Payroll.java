@@ -132,7 +132,7 @@ public class Payroll {
          salesReps.add(new SalesRep("Lyndall Walcot", 202, 40, 1200));
           salesReps.add(new SalesRep("Fabian Sebastian", 203, 30, 800));
            salesReps.add(new SalesRep("Hamlet Survey", 204, 45, 1500));
-             salesReps.add(new SalesRep("Romario Richardson", 205, 38, 1100));
+             salesReps.add(new SalesRep("Romario Mclymont", 205, 38, 1100));
 
         // Task 5: Display SalesRep objects
         System.out.println("Sales Representatives Details:");
